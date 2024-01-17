@@ -37,7 +37,6 @@ public static class DependencyInjection
     private static IServiceCollection AddAuthentication(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<JwtSettings>(configuration.GetSection(JwtSettings.Section));
-
         services.AddSingleton<IJwtTokenGenerator, JwtTokenGenerator>();
 
         services
@@ -51,6 +50,7 @@ public static class DependencyInjection
     private static IServiceCollection AddIdentity(this IServiceCollection services)
     {
         services.AddIdentity<Employee, Role>()
+            .AddErrorDescriber<CustomIdentityErrorDescriber>()
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 

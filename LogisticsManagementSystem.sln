@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsManagementSystem.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsManagementSystem.Api", "LogisticsManagementSystem.Api\LogisticsManagementSystem.Api.csproj", "{A77D1CEE-FDE8-4004-9591-3B59F6EDBBF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsManagementSystem.Contract", "LogisticsManagementSystem.Contract\LogisticsManagementSystem.Contract.csproj", "{B6EA00CD-29CF-4577-9887-ECC3D3849C67}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticsManagementSystem.Contract", "LogisticsManagementSystem.Contract\LogisticsManagementSystem.Contract.csproj", "{AC644FF6-DFAE-4D6C-B00F-0CFE8B42AC6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,9 +38,9 @@ Global
 		{A77D1CEE-FDE8-4004-9591-3B59F6EDBBF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A77D1CEE-FDE8-4004-9591-3B59F6EDBBF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A77D1CEE-FDE8-4004-9591-3B59F6EDBBF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6EA00CD-29CF-4577-9887-ECC3D3849C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6EA00CD-29CF-4577-9887-ECC3D3849C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6EA00CD-29CF-4577-9887-ECC3D3849C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6EA00CD-29CF-4577-9887-ECC3D3849C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC644FF6-DFAE-4D6C-B00F-0CFE8B42AC6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC644FF6-DFAE-4D6C-B00F-0CFE8B42AC6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC644FF6-DFAE-4D6C-B00F-0CFE8B42AC6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC644FF6-DFAE-4D6C-B00F-0CFE8B42AC6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

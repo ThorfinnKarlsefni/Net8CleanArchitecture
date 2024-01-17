@@ -1,12 +1,27 @@
-﻿namespace LogisticsManagementSystem.Domain;
+﻿using System.Net.NetworkInformation;
+
+namespace LogisticsManagementSystem.Domain;
 
 public abstract class Entity
 {
-    public Guid Id { get; private init; }
+    public virtual DateTime CreatedAt { get; init; }
+    public virtual DateTime UpdatedAt { get; set; }
+    public virtual DateTime DeletedAt { get; set; }
 
-    protected Entity(Guid id)
+    public Entity()
     {
-        Id = id;
+        CreatedAt = DateTime.UtcNow;
+        UpdatedAt = CreatedAt;
     }
 
+    public void SetUpdatedAt()
+    {
+        this.UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void SetDeletedAt()
+    {
+        this.UpdatedAt = DateTime.UtcNow;
+        this.DeletedAt = DateTime.UtcNow;
+    }
 }

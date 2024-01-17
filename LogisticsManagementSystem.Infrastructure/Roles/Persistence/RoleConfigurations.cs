@@ -1,4 +1,5 @@
 ﻿using LogisticsManagementSystem.Domain;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -9,7 +10,6 @@ public class RoleConfigurations : IEntityTypeConfiguration<Role>
     public void Configure(EntityTypeBuilder<Role> builder)
     {
         builder.ToTable("Roles");
-        builder.Property(r => r.Id).HasColumnType("varchar(20)");
         builder.Property(r => r.CreatedAt).HasColumnType("timestamp");
         builder.Property(r => r.UpdatedAt).HasColumnType("timestamp");
     }

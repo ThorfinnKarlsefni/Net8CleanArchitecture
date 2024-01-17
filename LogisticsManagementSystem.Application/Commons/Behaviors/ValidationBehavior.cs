@@ -10,7 +10,11 @@ public class ValidationBehavior<TRequest, TResponse>(IValidator<TRequest>? valid
         where TResponse : IErrorOr
 {
     private readonly IValidator<TRequest>? _validator = validator;
-    public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+
+    public async Task<TResponse> Handle(
+        TRequest request,
+        RequestHandlerDelegate<TResponse> next,
+        CancellationToken cancellationToken)
     {
         if (_validator is null)
         {
@@ -27,8 +31,7 @@ public class ValidationBehavior<TRequest, TResponse>(IValidator<TRequest>? valid
         var errors = validationResult.Errors
             .ConvertAll(error => Error.Validation(
                 code: error.PropertyName,
-                description: error.ErrorMessage
-            ));
+                description: error.ErrorMessage));
 
         return (dynamic)errors;
     }

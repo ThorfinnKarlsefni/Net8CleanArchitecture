@@ -6,7 +6,7 @@ namespace LogisticsManagementSystem.Domain;
 public class Employee : IdentityUser<Guid>
 {
     public string? Avatar { get; set; }
-    public DateTime CreatedAt { get; private set; }
+    public DateTime CreatedAt { get; private init; }
     public DateTime UpdatedAt { get; private set; }
     public DateTime? DeletedAt { get; private set; }
 
@@ -18,8 +18,14 @@ public class Employee : IdentityUser<Guid>
         UpdatedAt = CreatedAt;
     }
 
-    public void SoftDelete()
+    public void SetUpdatedAt()
     {
-        DeletedAt = DateTime.Now;
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void SetDeletedAt()
+    {
+        UpdatedAt = DateTime.UtcNow;
+        DeletedAt = DateTime.UtcNow;
     }
 }
